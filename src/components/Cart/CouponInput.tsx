@@ -3,7 +3,7 @@ import { Tag, X, Check } from 'lucide-react';
 import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { mockCoupons } from '../../lib/mock-data';
 
 interface CouponInputProps {
@@ -133,7 +133,7 @@ export function CouponInput({
       {!appliedCoupon && (
         <div className="text-xs text-gray-500">
           {language === 'en' ? 'Try: ' : 'Essayez : '}
-          {mockCoupons.slice(0, 2).map((c, i) => (
+          {mockCoupons.slice(0, 2).map((c, _i) => (
             <button
               key={c.code}
               onClick={() => setCouponCode(c.code)}

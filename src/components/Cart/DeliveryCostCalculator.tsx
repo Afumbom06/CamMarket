@@ -52,7 +52,7 @@ export function DeliveryCostCalculator({
           {language === 'en' ? 'Delivery Options' : 'Options de Livraison'}
         </h3>
 
-        <RadioGroup value={deliveryMethod} onValueChange={(value) => onDeliveryMethodChange(value as 'home' | 'pickup')}>
+        <RadioGroup value={deliveryMethod} onValueChange={(value: string) => onDeliveryMethodChange(value as 'home' | 'pickup')}>
           {/* Home Delivery */}
           <div className={`flex items-start gap-3 p-3 rounded-lg border-2 transition-all cursor-pointer ${
             deliveryMethod === 'home' ? 'border-green-600 bg-green-50' : 'border-gray-200 hover:border-green-300'
